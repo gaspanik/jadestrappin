@@ -2,7 +2,7 @@ var gulp = require('gulp')
 ,	jade = require('gulp-jade')
 ,	prettify = require('gulp-prettify')
 ,	sass = require('gulp-ruby-sass')
-, 	minifycss = require('gulp-minify-css')
+,	minifycss = require('gulp-minify-css')
 ,	rename = require('gulp-rename')
 ,	connect = require('gulp-connect');
 
@@ -39,8 +39,9 @@ gulp.task('jade', function() {
 
 gulp.task('styles', function() {
 	gulp.src('src/css/*.scss')
-		// If you need sourcemaps, pls. rewrite below options to {style: 'expanded' , sourcemap: true} .
-		// But you need to install sass 3.3 (gem install --pre sass)
+		// If you need sourcemaps, pls. rewrite below options to {style: 'expanded' , sourcemap: true}.
+		// But you need to install sass 3.3 (gem install --pre sass).
+		// If you use bunde install, run 'bundle install --path yourpath' and rewrite option to {bundleExec: true, style: 'expanded' , sourcemap: true}.
 		.pipe(sass({ style: 'expanded' }))
 		.pipe(gulp.dest('dist/css'))
 		.pipe(rename({suffix: '.min'}))

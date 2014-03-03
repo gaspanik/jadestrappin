@@ -8,7 +8,7 @@ Bower.
 
 ## Usage
 
-Install some components.
+Install some components and initialize.
 
 	$ npm install
 
