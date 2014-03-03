@@ -16,6 +16,6 @@ Run gulp
 
 	$ npm start
 
-## Changes 0.0.2
+## Changes 0.0.3
 
-* Change 'Bootstrap-Accessibility-Plugin' bower install source.
+* Add scss sourcemaps option (Sass 3.3 pre install require).
