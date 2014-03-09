@@ -16,6 +16,6 @@ Run gulp
 
 	$ npm start
 
-## Changes 0.0.3
+## Changes 0.0.4
 
-* Add scss sourcemaps option (Sass 3.3 pre install require).
+* Add scss sourcemaps option (Require sass 3.3 install).
