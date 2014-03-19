@@ -16,6 +16,6 @@ Run gulp
 
 	$ npm start
 
-## Changes 0.0.4
+## Changes 0.0.5
 
-* Add scss sourcemaps option (Require sass 3.3 install).
+* Minify CSS w/ csso.
