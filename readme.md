@@ -16,6 +16,8 @@ Run gulp
 
 	$ npm start
 
-## Changes 0.0.5
+Open [http://localhost:1337](http://localhost:1337) with your favorite browser.
 
-* Minify CSS w/ csso.
+## Changes 0.0.6
+
+* Add marked and Minor tweaks for gulp-connect 2.x.
