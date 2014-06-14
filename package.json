@@ -18,6 +18,6 @@
     "gulp-csso": "*",
     "gulp-prettify": "*",
     "gulp-connect": "*",
-    "gulp": "*"
+    "gulp": "~3.7.0"
   }
 }
