@@ -16,8 +16,6 @@ Run gulp
 
 	$ npm start
 
-Open [http://localhost:1337](http://localhost:1337) with your favorite browser.
+## Changes 0.0.7
 
-## Changes 0.0.6
-
-* Add marked and Minor tweaks for gulp-connect 2.x.
+* Detect file change and reload w/ Browser-Sync, and support gulpjs 3.8.0

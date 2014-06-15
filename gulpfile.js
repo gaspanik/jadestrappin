@@ -4,29 +4,28 @@ var gulp = require('gulp'),
   sass = require('gulp-ruby-sass'),
   minifycss = require('gulp-csso'),
   rename = require('gulp-rename'),
-  connect = require('gulp-connect');
+  browserSync = require('browser-sync');
 
 gulp.task('init', function() {
   gulp.src('bower/bootstrap-sass-official/vendor/assets/stylesheets/**')
     .pipe(gulp.dest('src/css'))
-    .pipe(gulp.src('bower/bootstrap-sass-official/vendor/assets/fonts/**'))
+  gulp.src('bower/bootstrap-sass-official/vendor/assets/fonts/**')
     .pipe(gulp.dest('dist/css'))
-    .pipe(gulp.src('bower/bootstrap-accessibility-plugin/plugins/css/**'))
+  gulp.src('bower/bootstrap-accessibility-plugin/plugins/css/**')
     .pipe(gulp.dest('dist/css'))
-    .pipe(gulp.src('bower/bootstrap-accessibility-plugin/plugins/js/bootstrap-accessibility.min.js'))
+  gulp.src('bower/bootstrap-accessibility-plugin/plugins/js/bootstrap-accessibility.min.js')
     .pipe(gulp.dest('dist/js'))
-    .pipe(gulp.src('bower/jquery/dist/jquery.min.js'))
+  gulp.src('bower/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('connect', function() {
-  connect.server({
-    root: ['dist'], // If you use newer gulp-connect, change > root: ['dist'],
-    port: 1337,
-    livereload: true
-    // Open default browser. Support for gulp-connect 1.x
-    // open: {} 
-  })
+gulp.task('bs', function() {
+  browserSync.init(null, {
+    server: {
+      baseDir: "./dist"
+    },
+            notify: false
+  });
 });
 
 gulp.task('jade', function() {
@@ -61,4 +60,4 @@ gulp.task('watch', function() {
   gulp.watch(['src/templates/**'], ['jade']);
 });
 
-gulp.task('default', ['connect', 'styles', 'jade', 'watch']);
+gulp.task('default', ['bs', 'styles', 'jade', 'watch']);
