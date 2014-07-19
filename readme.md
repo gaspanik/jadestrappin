@@ -16,6 +16,6 @@ Run gulp
 
 	$ npm start
 
-## Changes 0.0.7
+## Changes 0.0.8
 
-* Detect file change and reload w/ Browser-Sync, and support gulpjs 3.8.0
+* Minor tweaks.
